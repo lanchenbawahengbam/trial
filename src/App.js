@@ -1,32 +1,25 @@
 import React from "react";
 import "./App.css";
-import NavBar from "./Components/NavBar";
 import Home from "./Components/Home";
 import Academics from "./Components/Academics";
 import Vice_chancellor from "./Components/Adminstration/Vice_chancellor";
 import Civil from "./Components/Department/Civil";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
+import NavBar from "./Components/NavBar";
+
+
 
 function App() {
   return (
-    <Router>
-      <div>
+    <>
+      <NavBar />
         <Switch>
-          <Route path="/Home">
-            <Home />
-          </Route>
-          <Route path="/Academics">
-            <Academics />
-          </Route>
-          <Route path="/Vice_chancellor">
-            <Vice_chancellor />
-          </Route>
-          <Route path="/Civil">
-            <Civil />
-          </Route>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/Academics" component={Academics} />
+        <Route exact path="/Vice_chancellor" component={Vice_chancellor} />
+        <Route exact path="/Civil" component={Civil} />
         </Switch>
-      </div>
-    </Router>
+    </>
   );
 }
 

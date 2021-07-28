@@ -1,10 +1,10 @@
 import React from "react";
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
 
 function NavBar() {
   return (
-    <Router>
+   
       <div>
         <Navbar bg="success" variant="dark" expand="xl">
           <Navbar.Collapse id="navbarScroll">
@@ -61,7 +61,7 @@ function NavBar() {
           </Navbar.Collapse>
         </Navbar>
       </div>
-    </Router>
+  
   );
 }
 
